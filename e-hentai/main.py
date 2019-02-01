@@ -35,7 +35,7 @@ def getList(word):
 
     for each in comicNameList:
         #print(each)
-        dir_name = each.replace('?','').replace('|','').replace('"','').replace('*','').replace('<','').replace('>','').replace(':','')
+        dir_name = each.replace('?','').replace('|','').replace('"','').replace('*','').replace('<','').replace('>','').replace(':','').replace('/','').replace('\\','')
         if not os.path.exists('./comic/'+dir_name):
            # dir = 'E:\PythonCode\e-hentai\comic\\'
             #print('不存在文件夹')
@@ -117,13 +117,13 @@ def getImage(imageUrl,dir):
 if __name__ == "__main__":
     sqlDB()
     #设置搜索的关键词
-    word = 'artist:kemono'
+    word = '汉化'
     comicUrlList,comicNameList = getList(word)
     print(comicUrlList,comicNameList)
     for i  in range(len(comicUrlList)):
         con = sqlite3.connect('comic.db')
         cursor1 = con.cursor()
-        dir_name = comicNameList[i].replace('?', '').replace('|', '').replace('"', '').replace('*', '').replace('<','').replace('>', '').replace(':', '')
+        dir_name = comicNameList[i].replace('?', '').replace('|', '').replace('"', '').replace('*', '').replace('<','').replace('>', '').replace(':', '').replace('/','').replace('\\','')
         print("开始爬取【{}】".format(dir_name))
         N=cursor1.execute('select name from ComicName where name = "{}"'.format(dir_name)).fetchall()
         if N:
