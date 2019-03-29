@@ -8,4 +8,4 @@
     
    
 # 示例
-！[] (Python/nnxy_jwc/exmaple.jpg)
+！[] (https://github.com/Python/nnxy_jwc/exmaple.jpg)
