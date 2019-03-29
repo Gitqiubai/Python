@@ -8,4 +8,4 @@
     
    
 # 示例
-！[image] (https://github.com/Gitqiubai/Python/blob/master/nnxy_jwc/exmaple.jpg)
+！[image] (https://github.com/Gitqiubai/Python/raw/master/nnxy_jwc/exmaple.jpg)
